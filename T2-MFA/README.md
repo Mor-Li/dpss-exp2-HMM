@@ -196,3 +196,4 @@ conda install -c conda-forge montreal-forced-aligner
 
 附加题二（选做）（上限10分）：如何改进对齐结果？这是个开放的问题，需要附上实验，用pratt说明改进后的textgrid比原来的textgrid好即可。（比较难）
 
+
