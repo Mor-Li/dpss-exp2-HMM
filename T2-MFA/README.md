@@ -57,7 +57,7 @@ User/Documents/MFA
 
 以windows系统为例，MFA文件路径在
 
-![img](img1.png)
+![img](img6.png)
 
 
 
