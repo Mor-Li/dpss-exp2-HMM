@@ -17,6 +17,9 @@ MFA 支持 Windows、macOS 和 Linux 操作系统。Kaldi和MFA现在已经构�
 ### **使用conda安装MFA**
 
 1. 安装/[Conda](https://docs.conda.io/projects/miniconda/en/latest/)
+   如果你已安装过Conda，推荐使用下面的命令更新conda包，否则后面可能会引发报错
+
+   conda update -n base conda
 2. 创建新环境并安装MFA（这部分可能比较慢，需要等待）
 
 ```
@@ -32,7 +35,7 @@ conda create -n aligner -c conda-forge montreal-forced-aligner
 #  也可以先创建环境再安装MFA，命令如下：
 conda create -n aligner
 conda activate aligner 
-conda install montreal-forced-aligner -c conda-forge
+conda install -c conda-forge montreal-forced-aligner
 ```
 
 ​	3.进入环境
@@ -46,7 +49,7 @@ conda activate aligner
 
 
 
-安装后，MFA的文件路径为
+安装后，MFA的默认中间文件存储路径为
 
 ```
 User/Documents/MFA
@@ -113,7 +116,7 @@ https://cloud.tsinghua.edu.cn/d/ed86924e88e14023901a/
 
 new_acoustic_model.zip是声学模型，能够对音频进行声学分析。
 
-将new_acoustic_model.zip放在 /MFA文件目录/pretrained_models/acoustic（整个zip放进去，不用解压)
+推荐将词典和声学模型以及数据集放在同一目录下以便后续操作
 
 例如
 
@@ -129,14 +132,14 @@ new_acoustic_model.zip是声学模型，能够对音频进行声学分析。
 
 ```
 mfa validate path:/dataset path:/dictionary path:/acoustic_modle
-#例如 mfa validate mfadir pinyin-lexicon-r-new.txt new_acoustic_model
+#例如 mfa validate mfadir pinyin-lexicon-r-new.txt new_acoustic_model.zip
 ```
 
 #### **对齐**
 
 ```
 mfa align /path:/dataset path:/dictionary path:/acoustic_modle path:/output
-#例如 mfa align mfadir pinyin-lexicon-r-new.txt new_acoustic_model output
+#例如 mfa align mfadir pinyin-lexicon-r-new.txt new_acoustic_model.zip output
 ```
 
 对齐生成的中间文件在
