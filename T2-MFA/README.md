@@ -16,7 +16,7 @@ MFA 支持 Windows、macOS 和 Linux 操作系统。Kaldi和MFA现在已经构�
 
 ### **使用conda安装MFA**
 
-1. 安装/[Conda](https://docs.conda.io/projects/miniconda/en/latest/)，
+1. 安装[Conda](https://docs.conda.io/projects/miniconda/en/latest/)，
    我们建议使用最新版本的conda来安装MFA，已尽可能减少错误的发生，可以使用下面的命令更新conda包
 
    conda update -n base conda
